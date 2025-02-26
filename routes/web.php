@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 
 Route::middleware([
@@ -17,3 +18,5 @@ Route::middleware([
 route::get('/redirect',[HomeController::class,'redirect']);
 
 route::get('/',[HomeController::class,'index']);
+route::get('/product',[AdminController::class,'product']);
+route::post('/uploadproduct',[AdminController::class,'uploadproduct']);
